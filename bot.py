@@ -1,6 +1,7 @@
 import discord
 import responses
 import os
+from server import server
 
 async def send_message(message, user_message, is_private):
   try:
@@ -37,4 +38,5 @@ def run_discord_bot():
     else:
       await send_message(message, user_message, is_private = False)
 
+  server()
   client.run(token)
